@@ -1,2 +1,58 @@
+# FinChat AI - Requirements File
+# Install with: pip install -r requirements.txt
+
+# ============================================================================
+# CORE DEPENDENCIES (Required for basic app)
+# ============================================================================
+
 streamlit
+plotly
 pandas
+yfinance
+sqlite3
+# ============================================================================
+# OPTIONAL: For Full Model Integration
+# ============================================================================
+
+# Uncomment these if you want to load the fine-tuned model:
+torch
+transformers
+accelerate
+bitsandbytes
+peft
+
+# ============================================================================
+# OPTIONAL: For RAG Pipeline
+# ============================================================================
+
+# Uncomment for SEC filing analysis:
+langchain
+sentence-transformers
+faiss-cpu
+chromadb==0.4.22
+
+# ============================================================================
+# OPTIONAL: For SEC Filing Download
+# ============================================================================
+
+# Uncomment to download SEC filings:
+sec-edgar-downloader
+beautifulsoup4
+lxml
+
+# ============================================================================
+# OPTIONAL: For News Integration
+# ============================================================================
+
+# Uncomment for news data:
+newsapi-python
+requests
+
+# ============================================================================
+# DEVELOPMENT TOOLS (Optional)
+# ============================================================================
+
+# For development and testing:
+pytest
+black
+flake8
