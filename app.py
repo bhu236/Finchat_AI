@@ -5,7 +5,9 @@ Deploy with: streamlit run finchat_app.py
 First install dependencies:
     pip install streamlit yfinance plotly pandas pypdf2 python-docx
 """
-
+import sys
+__import__('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
 import yfinance as yf
 import plotly.graph_objects as go
