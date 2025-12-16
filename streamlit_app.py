@@ -669,3 +669,4 @@ with tabs[5]:
 
 # End
 st.sidebar.caption("FinChat AI — Fixed. Ensure you set a valid OpenAI API key for embeddings/chat.")
+

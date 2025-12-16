@@ -44,7 +44,7 @@ import numpy as np
 # ============================================================================
 
 st.set_page_config(
-    page_title="FinChat AI - Advanced Multi-Agent RAG",
+    page_title="FinChat AI - Advanced Multi-Agent RAG based Financial Advisor",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -980,6 +980,8 @@ def product_analyst_agent(ticker: str, metrics: Dict, query: str = "") -> str:
                     icon, css = "🔴", "relevance-low"
                 
                 response += f"{icon} **Finding {i}** <span class='{css}'>({similarity:.1f}%)</span> | {section}\n\n"
+                
+                # Remove section header from text
                 text = re.sub(r'^\[.*?\]\n\n', '', result['text'])
                 response += f"{text[:600]}...\n\n"
         else:
@@ -1514,9 +1516,9 @@ with st.sidebar:
 # ============================================================================
 
 st.markdown('<h1 class="main-header">FinChat AI</h1>', unsafe_allow_html=True)
-st.markdown("**Advanced Multi-Agent RAG System** | Vector DB • Semantic Search • Reranking • Multi-Agent")
+st.markdown("**Advanced Multi-Agent RAG based Financial Advisor System** | Vector DB • Semantic Search • Reranking • Multi-Agent")
 
-tab1, tab2, tab3, tab4 = st.tabs(["💬 Multi-Agent Chat", "📊 Analytics", "📈 Visualizations", "ℹ️ System Info"])
+tab1, tab2, tab3, tab4 = st.tabs(["💬  Chat", "📊 Analytics", "📈 Visualizations", "ℹ️ System Info"])
 
 # ============================================================================
 # TAB 1: CHAT
@@ -1906,6 +1908,6 @@ st.markdown("""
 <div style='text-align: center; color: #666; font-size: 0.85rem;'>
     <p>🤖 FinChat AI v4.0 | Complete Multi-Agent RAG System</p>
     <p>Vector DB • Semantic Search • Reranking • Multi-Agent Coordination</p>
-    <p>IST.688.M001.FALL25 - Building HC-AI Applications</p>
+    <p>IST.688.M001.FALL25 - Building HC-AI Applications | Syracuse University</p>
 </div>
 """, unsafe_allow_html=True)
